@@ -1,0 +1,1 @@
+javascript:(function(){var arr = Array.from(document.querySelector('div.list-wrap').querySelectorAll('a'), a => a.textContent.trim());navigator.clipboard.writeText(arr.join('\n'));})();
