@@ -28,7 +28,7 @@ def get_mangapill_recents():
     divs = soup.find("div", class_="grid").find_all("a", class_="text-secondary")
     recents = set()
     for each in divs:
-        recents.update(each.text.strip().lower().split("\n"))
+        recents.update(each.text.strip().lower().replace(",", "\n").split("\n"))
     return recents
 
 
